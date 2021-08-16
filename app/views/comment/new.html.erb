@@ -1,0 +1,11 @@
+<div class = "well">
+
+   <%= form_for @comment, :url => comment_create_path(post_id: params[:post_id]), html: { multipart: true } do |f| %>
+   
+        <%= f.label :description %>
+      <%= f.text_field :description %><br><br>
+       
+      <%= f.submit "Save", class: "btn btn-primary" %>
+      
+   <% end %>
+</div>

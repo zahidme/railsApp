@@ -1,0 +1,12 @@
+<div class = "well">
+   <%= form_for @post, :url =>{:action => "create"}, html: { multipart: true } do |f| %>
+      <%= f.label :title %>
+      <%= f.text_field :title %><br><br>
+        <%= f.label :description %>
+      <%= f.text_field :description %><br><br>
+      <%= f.label :attachment %>
+      <%= f.file_field :attachment %>
+      <%= f.submit "Save", class: "btn btn-primary" %>
+      
+   <% end %>
+</div>

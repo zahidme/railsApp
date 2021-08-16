@@ -1,0 +1,27 @@
+
+
+
+
+<p>
+   <strong>Post:</strong> <%= @post.description %><br />
+</p>
+
+
+<p>
+   <strong>Created Date:</strong> <%= @post.created_at %><br />
+</p>
+
+
+<hr />
+<b> Comments </b>
+<% @post.comments.each do |comment|%>
+<p><%= comment.description %></p>
+<% end %>
+
+<%= link_to("Add Comment", comment_new_path(post_id: @post.id)) %>
+
+
+
+
+
+<%= link_to 'Back', {:action => 'index'} %>
